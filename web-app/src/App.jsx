@@ -9,6 +9,7 @@ function Sample() {
         <div className="max-w-md">
           <h1 className="mb-5 text-5xl font-bold">
             رياكت بالعربي
+            hello
           </h1>
           <p className="mb-5">
             تعلم رياكت باللغة العربية

@@ -3,13 +3,19 @@ import * as Icons from "./Icons";
 const drawerId = "main-drawer";
 
 function Navbar() {
+
+    function toggleDrawer() {
+        const drawer = document.getElementById(drawerId);
+        drawer.checked = !drawer.checked;
+    }
+
     return (
         <div>
             <div className="navbar bg-base-100">
                 <div className="flex-none">
-                    <label className="btn btn-square btn-ghost" htmlFor={drawerId}>
+                    <button className="btn btn-square btn-ghost " onClick={toggleDrawer}>
                         <Icons.Menu />
-                    </label>
+                    </button>
                 </div>
                 <div className="flex-1">
                     <a className="btn btn-ghost normal-case text-xl">رياكت بالعربي</a>
@@ -33,8 +39,8 @@ function Drawer(props) {
                 <div className="drawer-content flex flex-col">
                     {props.children}
                 </div>
-                <div className="drawer-side">
-                    <label htmlFor={drawerId} className="drawer-overlay"></label>
+                <div className="drawer-side w-fit fixed">
+                    <label htmlFor={drawerId} className="drawer-overlay hidden"></label>
                     <ul className="menu p-4 w-80 bg-base-100">
                         <li><a>Sidebar Item 1</a></li>
                         <li><a>Sidebar Item 2</a></li>
