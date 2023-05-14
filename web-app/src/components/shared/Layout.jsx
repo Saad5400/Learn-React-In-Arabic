@@ -34,13 +34,13 @@ function Navbar() {
 function Drawer(props) {
     return (
         <div>
-            <div className="drawer">
+            <div className="drawer drawer-mobile">
                 <input id={drawerId} type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col">
                     {props.children}
                 </div>
-                <div className="drawer-side w-fit fixed">
-                    <label htmlFor={drawerId} className="drawer-overlay hidden"></label>
+                <div className="drawer-side">
+                    <label htmlFor={drawerId} className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 bg-base-100">
                         <li><a>Sidebar Item 1</a></li>
                         <li><a>Sidebar Item 2</a></li>
