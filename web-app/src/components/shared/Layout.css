@@ -1,3 +1,4 @@
 .primary-scrollbar {
-    @apply scrollbar-thin scrollbar-thumb-primary scrollbar-track-primary-content;
+    /* scrollbar-thin scrollbar-thumb-secondary-content dark:scrollbar-thumb-neutral-focus scrollbar-track-primary-content; */
+    @apply scrollbar-thin scrollbar-thumb-secondary-content dark:scrollbar-thumb-neutral-focus scrollbar-track-primary-content;
 }
