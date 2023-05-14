@@ -1,0 +1,3 @@
+.primary-scrollbar {
+    @apply scrollbar-thin scrollbar-thumb-primary scrollbar-track-primary-content;
+}

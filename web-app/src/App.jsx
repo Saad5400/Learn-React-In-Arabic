@@ -25,6 +25,10 @@ function Sample() {
             رياكت بالعربي react<br />
             رياكت بالعربي react<br />
             رياكت بالعربي react<br />
+            رياكت بالعربي react<br />
+            رياكت بالعربي react<br />
+            رياكت بالعربي react<br />
+            رياكت بالعربي react<br />
 
           </h1>
           <p className="mb-5">

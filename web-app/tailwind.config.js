@@ -6,7 +6,11 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require("daisyui"), require("tailwindcss-flip")],
+  plugins: [
+    require("daisyui"),
+    require("tailwindcss-flip"),
+    require('tailwind-scrollbar'),
+  ],
   daisyui: {
     themes: ["winter", "night"],
     rtl: true,
