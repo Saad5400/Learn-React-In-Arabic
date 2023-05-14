@@ -16,12 +16,12 @@ function setThemeFromLocalStorage() {
 	}
 	else {
 		if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-				// dark mode
-				setThemeDark();
+			// dark mode
+			setThemeDark();
 		}
 		else {
-				// light mode
-				setThemeLight();
+			// light mode
+			setThemeLight();
 		}
 	}
 }
@@ -46,7 +46,7 @@ function setThemeLight() {
 function WebsiteName(props) {
 	return (
 		<div className={props.className}>
-			<button className="btn btn-ghost normal-case text-2xl w-fit">
+			<button className="btn btn-ghost normal-case text-xl md:text-2xl w-fit">
 				<span className="text-primary">
 					رياكت
 				</span>
@@ -77,23 +77,36 @@ function Navbar() {
 
 	return (
 		<div className="navbar z-40 mt-0.5 sticky top-0 bg-base-100 bg-opacity-90 backdrop-blur border-b-2 border-b-primary-content">
-			<div className="flex-none">
-				<button className="btn btn-square btn-ghost lg:hidden" onClick={toggleDrawer}>
-					<Icons.Menu />
-				</button>
+			<div className="flex-none tooltip tooltip-bottom" data-tip="القائمة">
+				<div>
+					<button className="btn btn-square btn-ghost lg:hidden" onClick={toggleDrawer}>
+						<Icons.Menu />
+					</button>
+				</div>
 			</div>
 			<div className="flex-1">
-				<WebsiteName className="lg:hidden" />
+				<div className="tooltip tooltip-bottom" data-tip="الرئيسية">
+					<WebsiteName className="lg:hidden " />
+				</div>
 			</div>
 			<div className="flex-none">
-				<a className="btn btn-square btn-ghost" href="https://github.com/Saad5400/Learn-React-In-Arabic" target="_blank">
-					<Icons.Github />
-				</a>
-				<label className="btn btn-square btn-ghost swap swap-rotate">
-					<input type="checkbox" onChange={toggleTheme} id="themeToggleInput" />
-					<Icons.Sun className="swap-off" />
-					<Icons.Moon className="swap-on" />
-				</label>
+				<div className="tooltip tooltip-bottom" data-tip="تغيير الثيم">
+					<label className="btn btn-square btn-ghost swap swap-rotate">
+						<input type="checkbox" onChange={toggleTheme} id="themeToggleInput" />
+						<div className="swap-off">
+							<Icons.Sun />
+
+						</div>
+						<div className="swap-on">
+							<Icons.Moon />
+						</div>
+					</label>
+				</div>
+				<div className="tooltip tooltip-bottom" data-tip="Github">
+					<a className="btn btn-square btn-ghost" href="https://github.com/Saad5400/Learn-React-In-Arabic" target="_blank" rel="noreferrer">
+						<Icons.Github />
+					</a>
+				</div>
 			</div>
 		</div>
 	);
@@ -190,7 +203,7 @@ export default function Layout(props) {
 			setThemeFromLocalStorage();
 			setFirstRender(false);
 		}
-	}, [])
+	}, [firstRender])
 	return (
 		<div>
 			<Drawer>
