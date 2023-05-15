@@ -76,7 +76,7 @@ function Navbar() {
 	}
 
 	return (
-		<div className="navbar z-40 mt-0.5 sticky top-0 bg-base-100 bg-opacity-90 backdrop-blur border-b-2 border-b-primary-content">
+		<div className="navbar z-40 sticky top-0 bg-base-100 bg-opacity-90 backdrop-blur border-b-2 border-b-primary-content py-8">
 			<div className="flex-none tooltip tooltip-bottom" data-tip="القائمة">
 				<div>
 					<button className="btn btn-square btn-ghost lg:hidden" onClick={toggleDrawer}>
