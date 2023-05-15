@@ -59,7 +59,7 @@ function WebsiteName(props) {
 	);
 }
 
-function Navbar() {
+function Navbar(props) {
 
 	function toggleDrawer() {
 		const drawer = document.getElementById(drawerId);
@@ -76,17 +76,17 @@ function Navbar() {
 	}
 
 	return (
-		<div className="navbar z-40 sticky top-0 bg-base-100 bg-opacity-90 backdrop-blur border-b-2 border-b-primary-content py-8">
+		<div className={"navbar z-40 sticky top-0 bg-opacity-90 backdrop-blur py-8 bg-base text-primary-content " + (props.isSticky && "bg-base-100 text-primary-focus border-b-2 border-b-primary-content")}>
 			<div className="flex-none tooltip tooltip-bottom" data-tip="القائمة">
 				<div>
-					<button className="btn btn-square btn-ghost lg:hidden" onClick={toggleDrawer}>
+					<button className={"btn btn-square btn-ghost " + (props.isSticky ? "lg:hidden" : "")} onClick={toggleDrawer}>
 						<Icons.Menu />
 					</button>
 				</div>
 			</div>
 			<div className="flex-1">
 				<div className="tooltip tooltip-bottom" data-tip="الرئيسية">
-					<WebsiteName className="lg:hidden " />
+					<WebsiteName className={"lg:hidden " + (props.isSticky || "hidden")} />
 				</div>
 			</div>
 			<div className="flex-none">
@@ -114,11 +114,19 @@ function Navbar() {
 
 
 function Drawer(props) {
+	function handleScroll(event) {
+		if (event.target.scrollTop <= 10) {
+			props.setIsSticky(false);
+		}
+		else {
+			props.setIsSticky(true);
+		}
+	};
 	return (
 		<div>
-			<div className="drawer drawer-mobile">
+			<div className={"drawer " + (props.isSticky && " drawer-mobile") }>
 				<input id={drawerId} type="checkbox" className="drawer-toggle" />
-				<div className="drawer-content flex flex-col primary-scrollbar">
+				<div className="drawer-content flex flex-col primary-scrollbar" onScroll={handleScroll}>
 					{props.children}
 				</div>
 				<div className="drawer-side primary-scrollbar">
@@ -128,66 +136,8 @@ function Drawer(props) {
 							<WebsiteName />
 						</div>
 						<div className="p-2 ps-4">
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-							<div>Hello</div>
-
+							{/* loop 100 times */}
+							{Array.from(Array(100).keys()).map((i) => (<div key={i}>Hello</div>))}
 						</div>
 					</div>
 				</div>
@@ -197,6 +147,8 @@ function Drawer(props) {
 }
 
 export default function Layout(props) {
+	const [isSticky, setIsSticky] = useState(false);
+
 	const [firstRender, setFirstRender] = useState(true);
 	useEffect(() => {
 		if (firstRender) {
@@ -206,8 +158,8 @@ export default function Layout(props) {
 	}, [firstRender])
 	return (
 		<div>
-			<Drawer>
-				<Navbar />
+			<Drawer setIsSticky={setIsSticky} isSticky={isSticky}>
+				<Navbar isSticky={isSticky} />
 				<div>
 					{props.children}
 				</div>
