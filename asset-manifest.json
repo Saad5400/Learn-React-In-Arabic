@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Learn-React-In-Arabic/static/css/main.3d3d2444.css",
-    "main.js": "/Learn-React-In-Arabic/static/js/main.d317afa7.js",
+    "main.css": "/Learn-React-In-Arabic/static/css/main.d5b58724.css",
+    "main.js": "/Learn-React-In-Arabic/static/js/main.b4438581.js",
     "static/js/787.c6006e9a.chunk.js": "/Learn-React-In-Arabic/static/js/787.c6006e9a.chunk.js",
     "static/media/logo.svg": "/Learn-React-In-Arabic/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Learn-React-In-Arabic/index.html",
-    "main.3d3d2444.css.map": "/Learn-React-In-Arabic/static/css/main.3d3d2444.css.map",
-    "main.d317afa7.js.map": "/Learn-React-In-Arabic/static/js/main.d317afa7.js.map",
+    "main.d5b58724.css.map": "/Learn-React-In-Arabic/static/css/main.d5b58724.css.map",
+    "main.b4438581.js.map": "/Learn-React-In-Arabic/static/js/main.b4438581.js.map",
     "787.c6006e9a.chunk.js.map": "/Learn-React-In-Arabic/static/js/787.c6006e9a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3d3d2444.css",
-    "static/js/main.d317afa7.js"
+    "static/css/main.d5b58724.css",
+    "static/js/main.b4438581.js"
   ]
 }
