@@ -119,6 +119,34 @@ function Navbar(props) {
 	);
 }
 
+function MenuTitle(props) {
+	return (
+		<li className="menu-title">
+			<span>{props.children}</span>
+		</li>
+	);
+}
+
+function MenuLink(props) {
+	const location = useLocation();
+	const isActive = location.pathname === props.to;
+	return (
+		<li className={isActive ? "bordered" : "hover-bordered"}>
+			<Link to={props.to} className="w-full">
+				<div className="w-full">
+					{props.children}
+				</div>
+				<div className=""></div>
+				{/* if props.badge */}
+				{props.badge && (
+					<div className={"badge " + (props.read && "badge-success")}>
+						{props.badge}
+					</div>
+				)}
+			</Link>
+		</li>
+	);
+}
 
 function Drawer(props) {
 	function handleScroll(event) {
@@ -138,15 +166,35 @@ function Drawer(props) {
 				</div>
 				<div className="drawer-side primary-scrollbar">
 					<label htmlFor={drawerId} className="drawer-overlay"></label>
-					<div className="menu w-80 bg-base-300">
+					<ul className="menu w-80 bg-base-300">
 						<div className="p-2 sticky top-0 bg-opacity-90 backdrop-blur hidden lg:flex border-b-2 border-b-primary-content">
 							<WebsiteName />
 						</div>
-						<div className="p-2 ps-4">
-							{/* loop 100 times */}
-							{Array.from(Array(100).keys()).map((i) => (<div key={i}>Hello</div>))}
-						</div>
-					</div>
+						<ul className="pt-2 drawer-side-menu">
+							<MenuTitle>مقدمة</MenuTitle>
+							<MenuLink to={"/about-react"} badge="5د">
+								ما هو رياكت؟
+							</MenuLink>
+							<MenuTitle>
+								من جافاسكربت الى رياكت
+							</MenuTitle>
+							<MenuLink to={"/from-js-to-react/index"} badge="5د">
+								اساسيات
+							</MenuLink>
+							<MenuLink to={"/from-js-to-react/updating-ui"} badge="5د">
+								تحديث الواجهة
+							</MenuLink>
+							<MenuLink to={"/from-js-to-react/getting-started"} badge="5د">
+								ابدأ مع رياكت
+							</MenuLink>
+							<MenuLink to={"/from-js-to-react/essential-javascript"} badge="5د">
+								مفاهيم جافاسكربت
+							</MenuLink>
+							<MenuLink to={"/from-js-to-react/core-concepts"} badge="5د">
+								مفاهيم رياكت
+							</MenuLink>
+						</ul>
+					</ul>
 				</div>
 			</div>
 		</div>
