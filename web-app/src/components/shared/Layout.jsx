@@ -1,8 +1,10 @@
 import * as Icons from "./Icons";
 import "./Layout.css";
-import { useState, useEffect, useLayoutEffect } from 'react'
+import { useState, useLayoutEffect, useEffect } from 'react'
+import { Link, useLocation } from "react-router-dom";
 
 const drawerId = "main-drawer";
+const drawerContentId = "main-drawer-content";
 const darkTheme = "night";
 const lightTheme = "winter";
 
@@ -15,14 +17,19 @@ function setThemeFromLocalStorage() {
 		setThemeLight();
 	}
 	else {
-		if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			// dark mode
-			setThemeDark();
-		}
-		else {
-			// light mode
-			setThemeLight();
-		}
+		// set theme based on user's preference
+
+		// changed: always use dark theme as default
+		setThemeDark();
+		// uncomment to use user's preference
+		// if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+		// 	// dark mode
+		// 	setThemeDark();
+		// }
+		// else {
+		// 	// light mode
+		// 	setThemeLight();
+		// }
 	}
 }
 
@@ -46,7 +53,7 @@ function setThemeLight() {
 function WebsiteName(props) {
 	return (
 		<div className={props.className}>
-			<button className="btn btn-ghost normal-case text-xl md:text-2xl w-fit">
+			<Link to="/" className="btn btn-ghost normal-case text-xl md:text-2xl w-fit">
 				<span className="text-primary">
 					رياكت
 				</span>
@@ -54,7 +61,7 @@ function WebsiteName(props) {
 				<span className="text-base-content">
 					بالعربي
 				</span>
-			</button>
+			</Link>
 		</div>
 	);
 }
@@ -115,7 +122,7 @@ function Navbar(props) {
 
 function Drawer(props) {
 	function handleScroll(event) {
-		if (event.target.scrollTop <= 10) {
+		if (event.target.scrollTop <= 10 && props.isHome) {
 			props.setIsSticky(false);
 		}
 		else {
@@ -126,7 +133,7 @@ function Drawer(props) {
 		<div>
 			<div className={"drawer " + (props.isSticky && " drawer-mobile") }>
 				<input id={drawerId} type="checkbox" className="drawer-toggle" />
-				<div className="drawer-content flex flex-col primary-scrollbar" onScroll={handleScroll}>
+				<div id={drawerContentId} className="drawer-content flex flex-col primary-scrollbar" onScroll={handleScroll}>
 					{props.children}
 				</div>
 				<div className="drawer-side primary-scrollbar">
@@ -147,8 +154,12 @@ function Drawer(props) {
 }
 
 export default function Layout(props) {
+
 	const [isSticky, setIsSticky] = useState(false);
 	const [firstRender, setFirstRender] = useState(true);
+	const [isHome, setIsHome] = useState(true);
+
+	const location = useLocation();
 
 	useLayoutEffect(() => {
 		if (firstRender) {
@@ -156,9 +167,26 @@ export default function Layout(props) {
 			setFirstRender(false);
 		}
 	}, [firstRender])
+	useLayoutEffect(() => {
+		setIsHome(location.pathname === "/");
+		// if window scroll is less than 10 and is home page
+		if (location.pathname === "/") {
+			setIsSticky(false);
+		}
+		else {
+			setIsSticky(true);
+		}
+	}, [location])
+	 useEffect(() => {
+		console.log("scrolling to top");
+		const drawer = document.getElementById(drawerContentId);
+		drawer.scrollTop = 0;
+	 }, [location]);
+
+	
 	return (
 		<div>
-			<Drawer setIsSticky={setIsSticky} isSticky={isSticky}>
+			<Drawer setIsSticky={setIsSticky} isSticky={isSticky} isHome={isHome}>
 				<Navbar isSticky={isSticky} />
 				<div>
 					{props.children}
