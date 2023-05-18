@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Learn-React-In-Arabic/static/css/main.78928732.css",
-    "main.js": "/Learn-React-In-Arabic/static/js/main.0a8b006c.js",
+    "main.css": "/Learn-React-In-Arabic/static/css/main.663edc32.css",
+    "main.js": "/Learn-React-In-Arabic/static/js/main.defb0ab1.js",
     "static/js/787.c6006e9a.chunk.js": "/Learn-React-In-Arabic/static/js/787.c6006e9a.chunk.js",
     "index.html": "/Learn-React-In-Arabic/index.html",
-    "main.78928732.css.map": "/Learn-React-In-Arabic/static/css/main.78928732.css.map",
-    "main.0a8b006c.js.map": "/Learn-React-In-Arabic/static/js/main.0a8b006c.js.map",
+    "main.663edc32.css.map": "/Learn-React-In-Arabic/static/css/main.663edc32.css.map",
+    "main.defb0ab1.js.map": "/Learn-React-In-Arabic/static/js/main.defb0ab1.js.map",
     "787.c6006e9a.chunk.js.map": "/Learn-React-In-Arabic/static/js/787.c6006e9a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.78928732.css",
-    "static/js/main.0a8b006c.js"
+    "static/css/main.663edc32.css",
+    "static/js/main.defb0ab1.js"
   ]
 }
