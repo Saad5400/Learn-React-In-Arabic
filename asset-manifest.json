@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Learn-React-In-Arabic/static/css/main.d5b58724.css",
-    "main.js": "/Learn-React-In-Arabic/static/js/main.b4438581.js",
+    "main.js": "/Learn-React-In-Arabic/static/js/main.6173fd4c.js",
     "static/js/787.c6006e9a.chunk.js": "/Learn-React-In-Arabic/static/js/787.c6006e9a.chunk.js",
     "static/media/logo.svg": "/Learn-React-In-Arabic/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/Learn-React-In-Arabic/index.html",
     "main.d5b58724.css.map": "/Learn-React-In-Arabic/static/css/main.d5b58724.css.map",
-    "main.b4438581.js.map": "/Learn-React-In-Arabic/static/js/main.b4438581.js.map",
+    "main.6173fd4c.js.map": "/Learn-React-In-Arabic/static/js/main.6173fd4c.js.map",
     "787.c6006e9a.chunk.js.map": "/Learn-React-In-Arabic/static/js/787.c6006e9a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d5b58724.css",
-    "static/js/main.b4438581.js"
+    "static/js/main.6173fd4c.js"
   ]
 }
