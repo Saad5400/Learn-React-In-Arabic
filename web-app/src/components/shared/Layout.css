@@ -2,3 +2,11 @@
     /* scrollbar-thin scrollbar-thumb-secondary-content dark:scrollbar-thumb-neutral-focus scrollbar-track-primary-content; */
     @apply scrollbar-thin scrollbar-thumb-secondary-content dark:scrollbar-thumb-neutral-focus scrollbar-track-primary-content;
 }
+
+.drawer-side-menu li:not(.menu-title) {
+    @apply text-sm;
+}
+
+.drawer-side-menu li.menu-title {
+    @apply mt-2;
+}
