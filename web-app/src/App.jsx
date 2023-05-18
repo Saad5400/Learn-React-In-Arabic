@@ -1,13 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 import Layout from './components/shared/Layout';
-import Homepage from './components/home/Homepage';
+import Homepage from './pages/Homepage';
+import { useState, useLayoutEffect } from 'react';
 
-function App() {
+
+function App(props) {
+
   return (
     <div dir='rtl'>
       <Layout>
-        <Homepage />
+        {props.children}
       </Layout>
     </div>
   );
