@@ -1,6 +1,6 @@
 import * as Icons from "./Icons";
 import "./Layout.css";
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useLayoutEffect } from 'react'
 
 const drawerId = "main-drawer";
 const darkTheme = "night";
@@ -148,9 +148,9 @@ function Drawer(props) {
 
 export default function Layout(props) {
 	const [isSticky, setIsSticky] = useState(false);
-
 	const [firstRender, setFirstRender] = useState(true);
-	useEffect(() => {
+
+	useLayoutEffect(() => {
 		if (firstRender) {
 			setThemeFromLocalStorage();
 			setFirstRender(false);
