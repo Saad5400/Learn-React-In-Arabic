@@ -21,18 +21,18 @@ function Footer() {
             <footer className="footer p-10 bg-neutral text-neutral-content">
                 <div>
                     <span className="footer-title">الخدمات</span>
-                    <a className="link link-hover">تطوير البرمجيات</a>
-                    <a className="link link-hover">المساعدة التعلمية</a>
+                    <Link to="/contact-us" className="link link-hover">تطوير البرمجيات</Link>
+                    <Link to="/contact-us" className="link link-hover">المساعدة التعلمية</Link>
                 </div>
                 <div>
-                    <span className="footer-title">المطور</span>
-                    <a className="link link-hover">حول</a>
-                    <a className="link link-hover">تواصل</a>
+                    <span className="footer-title">المطورين</span>
+                    <Link to="about-us" className="link link-hover">حول</Link>
+                    <Link to="/contact-us" className="link link-hover">تواصل</Link>
                 </div>
                 <div>
                     <span className="footer-title">قانوني</span>
-                    <a className="link link-hover">شروط الاستخدام</a>
-                    <a className="link link-hover">سياسة الخصوصية</a>
+                    <Link to="terms-of-use" className="link link-hover">شروط الاستخدام</Link>
+                    <Link to="privacy-policy" className="link link-hover">سياسة الخصوصية</Link>
                 </div>
             </footer>
             <footer className="footer px-10 py-4 bg-neutral text-neutral-content border-base-300">

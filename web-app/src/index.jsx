@@ -7,8 +7,6 @@ import Homepage from './pages/Homepage';
 import AboutReactIndex from './pages/about-react';
 
 import {
-  createBrowserRouter,
-  RouterProvider,
   BrowserRouter,
   Routes,
   Route,
@@ -21,6 +19,13 @@ root.render(
       <App>
         <Routes>
           <Route path="/" element={<Homepage />} />
+
+          <Route path='about-us' element={<div>about us</div>} />
+          <Route path='contact-us' element={<div>contact us</div>} />
+          
+          <Route path='terms-of-use' element={<div>terms of use</div>} />
+          <Route path='privacy-policy' element={<div>privacy policy</div>} />
+
           <Route path="about-react" element={<AboutReactIndex />} />
         </Routes>
       </App>
