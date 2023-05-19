@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Learn-React-In-Arabic/static/css/main.663edc32.css",
-    "main.js": "/Learn-React-In-Arabic/static/js/main.bcf127d1.js",
+    "main.js": "/Learn-React-In-Arabic/static/js/main.2f0972ed.js",
     "static/js/787.c6006e9a.chunk.js": "/Learn-React-In-Arabic/static/js/787.c6006e9a.chunk.js",
     "index.html": "/Learn-React-In-Arabic/index.html",
     "main.663edc32.css.map": "/Learn-React-In-Arabic/static/css/main.663edc32.css.map",
-    "main.bcf127d1.js.map": "/Learn-React-In-Arabic/static/js/main.bcf127d1.js.map",
+    "main.2f0972ed.js.map": "/Learn-React-In-Arabic/static/js/main.2f0972ed.js.map",
     "787.c6006e9a.chunk.js.map": "/Learn-React-In-Arabic/static/js/787.c6006e9a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.663edc32.css",
-    "static/js/main.bcf127d1.js"
+    "static/js/main.2f0972ed.js"
   ]
 }
