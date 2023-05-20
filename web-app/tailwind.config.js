@@ -8,6 +8,7 @@ module.exports = {
   },
   darkMode: 'class',
   plugins: [
+    require("@tailwindcss/typography"),
     require("daisyui"),
     require("tailwindcss-flip"),
     require('tailwind-scrollbar'),
