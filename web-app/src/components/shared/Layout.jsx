@@ -86,7 +86,7 @@ function Navbar(props) {
 		<div className={"navbar z-40 sticky top-0 bg-opacity-90 backdrop-blur py-8 bg-base text-primary-content " + (props.isSticky && "bg-base-100 text-primary-focus border-b-2 border-b-primary-content")}>
 			<div className="flex-none tooltip tooltip-bottom" data-tip="القائمة">
 				<div>
-					<button className={"btn btn-square btn-ghost " + (props.isSticky ? "lg:hidden" : "")} onClick={toggleDrawer}>
+					<button aria-label="menu" className={"btn btn-square btn-ghost " + (props.isSticky ? "lg:hidden" : "")} onClick={toggleDrawer}>
 						<Icons.Menu />
 					</button>
 				</div>
@@ -108,9 +108,10 @@ function Navbar(props) {
 							<Icons.Moon />
 						</div>
 					</label>
+					<input aria-label="theme" type="checkbox" className="hidden" />
 				</div>
 				<div className="tooltip tooltip-bottom" data-tip="Github">
-					<a className="btn btn-square btn-ghost" href="https://github.com/Saad5400/Learn-React-In-Arabic" target="_blank" rel="noreferrer">
+					<a aria-label="Github" className="btn btn-square btn-ghost" href="https://github.com/Saad5400/Learn-React-In-Arabic" target="_blank" rel="noreferrer">
 						<Icons.Github />
 					</a>
 				</div>
@@ -160,13 +161,14 @@ function Drawer(props) {
 	return (
 		<div>
 			<div className={"drawer " + (props.isSticky && " drawer-mobile") }>
+				<label className="hidden"></label>
 				<input id={drawerId} type="checkbox" className="drawer-toggle" />
 				<div id={drawerContentId} className="drawer-content flex flex-col primary-scrollbar" onScroll={handleScroll}>
 					{props.children}
 				</div>
 				<div className="drawer-side primary-scrollbar">
 					<label htmlFor={drawerId} className="drawer-overlay"></label>
-					<ul className="menu w-80 bg-base-300">
+					<div className="menu w-80 bg-base-300">
 						<div className="p-2 sticky top-0 bg-opacity-90 backdrop-blur hidden lg:flex border-b-2 border-b-primary-content">
 							<WebsiteName />
 						</div>
@@ -194,7 +196,7 @@ function Drawer(props) {
 								مفاهيم رياكت
 							</MenuLink>
 						</ul>
-					</ul>
+					</div>
 				</div>
 			</div>
 		</div>
