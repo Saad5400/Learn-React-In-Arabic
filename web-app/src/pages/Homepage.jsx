@@ -42,10 +42,10 @@ function Footer() {
                 </div>
                 <div className="md:place-self-center md:justify-self-end">
                     <div className="grid grid-flow-col gap-4">
-                        <a className="link" href="https://twitter.com/SaadBatwa" target="_blank" rel="noreferrer">
+                        <a aria-label="twitter" className="link" href="https://twitter.com/SaadBatwa" target="_blank" rel="noreferrer">
                             <Icons.Twitter />
                         </a>
-                        <a className="link" href="https://www.linkedin.com/in/saadbatwa" target="_blank" rel="noreferrer">
+                        <a aria-label="linkedin" className="link" href="https://www.linkedin.com/in/saadbatwa" target="_blank" rel="noreferrer">
                             <Icons.LinkedIn />
                         </a>
                     </div>
