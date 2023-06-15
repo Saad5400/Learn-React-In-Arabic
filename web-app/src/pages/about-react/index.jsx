@@ -1,5 +1,6 @@
 import Container from "../../components/shared/Container";
 import SectionHead from "../../components/shared/SectionHead";
+import Code from "../../components/shared/Code";
 
 /*
 Introduction to React:
@@ -48,8 +49,11 @@ export default function Index() {
                 </p>
 
                 <SectionHead>نظرة سريعة على المكونات</SectionHead>
-
-                <div className="join-item xl:w-1/2 lg:w-8/12 shadow-xl">
+                <Code className="custom-width" language="javascript" title="jsx">
+                    {`let x = 5;
+console.log(x);`}
+                </Code>
+                <div className="custom-width">
                     <figure className="m-0">
                         <img src={process.env.PUBLIC_URL + "/images/3-Videos.png"} alt="Shoes" />
                     </figure>

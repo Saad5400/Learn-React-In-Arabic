@@ -32,3 +32,7 @@ article.prose p {
 .dark article.prose p {
   color: #c2cfef;
 }
+
+.custom-width {
+  @apply xl:w-1/2 lg:w-8/12 shadow-xl;
+}
