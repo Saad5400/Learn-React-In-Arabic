@@ -17,11 +17,10 @@ function setThemeFromLocalStorage() {
 		setThemeLight();
 	}
 	else {
-		// set theme based on user's preference
-
 		// changed: always use dark theme as default
 		setThemeDark();
-		// uncomment to use user's preference
+
+		// set theme based on user's preference
 		// if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
 		// 	// dark mode
 		// 	setThemeDark();
@@ -120,6 +119,46 @@ function Navbar(props) {
 	);
 }
 
+function Footer() {
+	return (
+		<>
+			<footer className="footer p-10 bg-neutral text-neutral-content">
+				<div>
+					<span className="footer-title">الخدمات</span>
+					<Link to="/contact-us" className="link link-hover">تطوير البرمجيات</Link>
+					<Link to="/contact-us" className="link link-hover">المساعدة التعلمية</Link>
+				</div>
+				<div>
+					<span className="footer-title">المطورين</span>
+					<Link to="about-us" className="link link-hover">حول</Link>
+					<Link to="/contact-us" className="link link-hover">تواصل</Link>
+				</div>
+				<div>
+					<span className="footer-title">قانوني</span>
+					<Link to="terms-of-use" className="link link-hover">شروط الاستخدام</Link>
+					<Link to="privacy-policy" className="link link-hover">سياسة الخصوصية</Link>
+				</div>
+			</footer>
+			<footer className="footer px-10 py-4 bg-neutral text-neutral-content border-base-300">
+				<div className="items-center grid-flow-col">
+					<Icons.Hashtag />
+					<p>ACME Industries Ltd. <br />Providing reliable tech since 1992</p>
+				</div>
+				<div className="md:place-self-center md:justify-self-end">
+					<div className="grid grid-flow-col gap-4">
+						<a aria-label="twitter" className="link" href="https://twitter.com/SaadBatwa" target="_blank" rel="noreferrer">
+							<Icons.Twitter />
+						</a>
+						<a aria-label="linkedin" className="link" href="https://www.linkedin.com/in/saadbatwa" target="_blank" rel="noreferrer">
+							<Icons.LinkedIn />
+						</a>
+					</div>
+				</div>
+			</footer>
+		</>
+	);
+}
+
 function MenuTitle(props) {
 	return (
 		<li className="menu-title">
@@ -160,7 +199,7 @@ function Drawer(props) {
 	};
 	return (
 		<div>
-			<div className={"drawer " + (props.isSticky && " drawer-mobile") }>
+			<div className={"drawer " + (props.isSticky && " drawer-mobile")}>
 				<label className="hidden"></label>
 				<input id={drawerId} type="checkbox" className="drawer-toggle" />
 				<div id={drawerContentId} className="drawer-content flex flex-col primary-scrollbar" onScroll={handleScroll}>
@@ -175,7 +214,7 @@ function Drawer(props) {
 						<ul className="pt-2 drawer-side-menu">
 							<MenuTitle>مقدمة</MenuTitle>
 							<MenuLink to={"/about-react"} badge="5د">
-								ما هو رياكت؟
+								رياكت؟
 							</MenuLink>
 							<MenuTitle>
 								من جافاسكربت الى رياكت
@@ -227,13 +266,13 @@ export default function Layout(props) {
 			setIsSticky(true);
 		}
 	}, [location])
-	 useEffect(() => {
+	useEffect(() => {
 		console.log("scrolling to top");
 		const drawer = document.getElementById(drawerContentId);
 		drawer.scrollTop = 0;
-	 }, [location]);
+	}, [location]);
 
-	
+
 	return (
 		<div>
 			<Drawer setIsSticky={setIsSticky} isSticky={isSticky} isHome={isHome}>
@@ -241,6 +280,7 @@ export default function Layout(props) {
 				<div>
 					{props.children}
 				</div>
+				<Footer />
 			</Drawer>
 		</div>
 	);

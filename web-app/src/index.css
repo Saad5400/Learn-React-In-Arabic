@@ -24,3 +24,11 @@ code {
 .flip-x {
   transform: scaleX(-1);
 }
+
+article.prose p {
+  color: #3c4655;
+}
+
+.dark article.prose p {
+  color: #c2cfef;
+}
