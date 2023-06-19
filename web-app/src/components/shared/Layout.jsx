@@ -82,7 +82,7 @@ function Navbar(props) {
 	}
 
 	return (
-		<div className={"navbar z-40 sticky top-0 bg-opacity-90 backdrop-blur bg-base text-primary-content" + (props.isSticky && "bg-base-100 text-primary-focus border-b-2 border-b-primary-content")}>
+		<div className={"navbar z-40 sticky top-0 bg-opacity-90 backdrop-blur bg-base text-primary-content " + (props.isSticky && "bg-base-100 text-primary-focus border-b-2 border-b-primary-content")}>
 			<div className="flex-none tooltip tooltip-bottom" data-tip="القائمة">
 				<div>
 					<button aria-label="menu" className={"btn btn-square btn-ghost " + (props.isSticky ? "lg:hidden" : "")} onClick={toggleDrawer}>
