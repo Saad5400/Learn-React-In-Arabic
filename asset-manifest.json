@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Learn-React-In-Arabic/static/css/main.ed0120a5.css",
-    "main.js": "/Learn-React-In-Arabic/static/js/main.af8141cd.js",
+    "main.css": "/Learn-React-In-Arabic/static/css/main.204401b3.css",
+    "main.js": "/Learn-React-In-Arabic/static/js/main.472ded62.js",
     "react-syntax-highlighter/lowlight-import.js": "/Learn-React-In-Arabic/static/js/react-syntax-highlighter/lowlight-import.f4cf06a7.chunk.js",
     "react-syntax-highlighter_languages_highlight_oneC.js": "/Learn-React-In-Arabic/static/js/react-syntax-highlighter_languages_highlight_oneC.abe55224.chunk.js",
     "react-syntax-highlighter_languages_highlight_abnf.js": "/Learn-React-In-Arabic/static/js/react-syntax-highlighter_languages_highlight_abnf.0384bd89.chunk.js",
@@ -195,8 +195,8 @@
     "react-syntax-highlighter_languages_highlight_zephir.js": "/Learn-React-In-Arabic/static/js/react-syntax-highlighter_languages_highlight_zephir.075debc4.chunk.js",
     "static/js/787.c6006e9a.chunk.js": "/Learn-React-In-Arabic/static/js/787.c6006e9a.chunk.js",
     "index.html": "/Learn-React-In-Arabic/index.html",
-    "main.ed0120a5.css.map": "/Learn-React-In-Arabic/static/css/main.ed0120a5.css.map",
-    "main.af8141cd.js.map": "/Learn-React-In-Arabic/static/js/main.af8141cd.js.map",
+    "main.204401b3.css.map": "/Learn-React-In-Arabic/static/css/main.204401b3.css.map",
+    "main.472ded62.js.map": "/Learn-React-In-Arabic/static/js/main.472ded62.js.map",
     "lowlight-import.f4cf06a7.chunk.js.map": "/Learn-React-In-Arabic/static/js/react-syntax-highlighter/lowlight-import.f4cf06a7.chunk.js.map",
     "react-syntax-highlighter_languages_highlight_oneC.abe55224.chunk.js.map": "/Learn-React-In-Arabic/static/js/react-syntax-highlighter_languages_highlight_oneC.abe55224.chunk.js.map",
     "react-syntax-highlighter_languages_highlight_abnf.0384bd89.chunk.js.map": "/Learn-React-In-Arabic/static/js/react-syntax-highlighter_languages_highlight_abnf.0384bd89.chunk.js.map",
@@ -391,7 +391,7 @@
     "787.c6006e9a.chunk.js.map": "/Learn-React-In-Arabic/static/js/787.c6006e9a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed0120a5.css",
-    "static/js/main.af8141cd.js"
+    "static/css/main.204401b3.css",
+    "static/js/main.472ded62.js"
   ]
 }
