@@ -122,7 +122,7 @@ function Navbar(props) {
 function Footer() {
 	return (
 		<>
-			<footer className="footer p-10 bg-neutral text-neutral-content">
+			<footer className="footer border-t-2 border-b-primary-content p-10 bg-primary-content text-primary">
 				<div>
 					<span className="footer-title">الخدمات</span>
 					<Link to="/contact-us" className="link link-hover">تطوير البرمجيات</Link>
@@ -139,7 +139,7 @@ function Footer() {
 					<Link to="privacy-policy" className="link link-hover">سياسة الخصوصية</Link>
 				</div>
 			</footer>
-			<footer className="footer px-10 py-4 bg-neutral text-neutral-content border-base-300">
+			<footer className="footer px-10 py-4 bg-primary-content text-primary border-base-300">
 				<div className="items-center grid-flow-col">
 					<Icons.Hashtag />
 					<p>ACME Industries Ltd. <br />Providing reliable tech since 1992</p>
