@@ -82,7 +82,7 @@ function Navbar(props) {
 	}
 
 	return (
-		<div className={"navbar z-40 sticky top-0 bg-opacity-90 backdrop-blur py-8 bg-base text-primary-content " + (props.isSticky && "bg-base-100 text-primary-focus border-b-2 border-b-primary-content")}>
+		<div className={"navbar z-40 sticky top-0 bg-opacity-90 backdrop-blur bg-base text-primary-content" + (props.isSticky && "bg-base-100 text-primary-focus border-b-2 border-b-primary-content")}>
 			<div className="flex-none tooltip tooltip-bottom" data-tip="القائمة">
 				<div>
 					<button aria-label="menu" className={"btn btn-square btn-ghost " + (props.isSticky ? "lg:hidden" : "")} onClick={toggleDrawer}>
@@ -216,7 +216,7 @@ function Drawer(props) {
 							<MenuLink to={"/about-react"} badge="5د">
 								رياكت؟
 							</MenuLink>
-							<MenuTitle>
+							{/* <MenuTitle>
 								من جافاسكربت الى رياكت
 							</MenuTitle>
 							<MenuLink to={"/from-js-to-react/index"} badge="5د">
@@ -233,7 +233,7 @@ function Drawer(props) {
 							</MenuLink>
 							<MenuLink to={"/from-js-to-react/core-concepts"} badge="5د">
 								مفاهيم رياكت
-							</MenuLink>
+							</MenuLink> */}
 						</ul>
 					</div>
 				</div>
